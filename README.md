@@ -6,9 +6,9 @@ In this week's lab we will practice:
 * sorting, and 
 * linked lists
 
-Given an *linked list* of Strings, use *quicksort* (as described in class) to sort the strings in order of **increasing length**. 
+Given an *linked list* of Strings, use merge sort (as described in class) to sort the strings in order of **increasing length**. 
 
-You should use the code we developed in class on [September 28rd](https://github.com/CS2401-Fall2020/September28-inClass).
+You should use the code we developed in class on [September 23rd](https://github.com/CS2401-Fall2020/September23-inClass).
 
 Do not change the method signatures. **Do not use helper methods**. 
 
