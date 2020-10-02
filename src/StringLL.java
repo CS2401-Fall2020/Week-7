@@ -3,7 +3,7 @@ public class StringLL {
   public String val;
   public StringLL next; 
   
-  public static StringLL quicksortLengths(StringLL stringListHead){
+  public static StringLL mergeSortLengths(StringLL left){
     return null;
   }
   
@@ -13,6 +13,12 @@ public class StringLL {
   
   public String toString() {
     return null;
+  }
+  
+  public StringLL cut() {
+    StringLL temp = next;
+    next = null;
+    return temp;
   }
   
 }

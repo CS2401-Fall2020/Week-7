@@ -13,10 +13,11 @@ You should use the code we developed in class on [September 28rd](https://github
 Do not change the method signatures. **Do not use helper methods**. 
 
 ## Tasks
-### static method `quicksortLengths(StringLL stringListHead)`
+### static method `mergeSortLengths(StringLL left)`
 
-This *recursive* method will use quicksort to sort the elements in the list who's head is `stringListHead` by their **string lengths**. 
-The method will be implemented by creating two linked lists: one with the elements that are shorter than the midpoint, and one with the elements that are longer 
+This *recursive* method will use merge sort to sort the elements in the list who's head is `left` by their **string lengths**. 
+The method will be implemented by creating two linked lists each containing half the elements 
+(with odd sized arrays having one extra element on the half containing the lower indexes)
 and making recursive calls on those. 
 The resulting lists will then concatenated and the head pointer of the front of the combined list returned. 
 In the case of ties in the length of the string they will be put in alphabetical order.  
@@ -61,16 +62,25 @@ If the list contains `"A" --> "B" --> "C" --> null`.
 * When you call `toString()` on the third element (containing "C") the value will be `C`.
 (note that none of these end in a comma after the "C"). 
 
+### non static method `append(StringLL inNode)`
+This is a **recursive** method that appends inNode at the end of the linked list. 
+Hint: if the current node is the end the next pointer should be changed from null to point to inNode, 
+if its not the end you have a linked list node in next so you need to ask that node to do it. 
+
 ### Testing
-You should provide 10 unit tests in your main method in the `QSLenTester.java` file that show your new methods satisfy all of the requirements. 
+You should provide 15 unit tests in your main method in the `QSLenTester.java` file that show your new methods satisfy all of the requirements. 
 These can be formatted using print statements or java assert statements (no need to use JUnit).
 Each test should be clearly labeled within the main method, and accompanied by text explaining the expected value for the test and why that test is included.
 
+**Note**
+I have provided a utility function `cut()` which returns the pointer of the second element and sets the next pointer of the first to null. For example is the list `myList` is `"A" --> "B" --> "C" --> null`, and I run `myList = myList.cut()`, then `myList` is now `"B" --> "C" --> null`
+
 ## Grading
-* `quicksortLengths` -- 40 pts
-* `countElements` -- 20 pts
-* `toString` -- 20 pts
-* unit tests -- 20 pts (2 pts each) 
+* `mergeSortLengths` -- 40 pts
+* `append` -- 15 pts
+* `countElements` -- 10 pts
+* `toString` -- 10 pts
+* unit tests -- 15 pts (1 pts each) 
 
 Lateness rule: -10 pts for 1 day of lateness / - 20 pts for 2 days of lateness / 0 after that, but you still have to turn in your work
 
