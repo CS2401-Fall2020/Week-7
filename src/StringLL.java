@@ -15,6 +15,10 @@ public class StringLL {
     return null;
   }
   
+  public void append() {
+    
+  }
+  
   public StringLL cut() {
     StringLL temp = next;
     next = null;
