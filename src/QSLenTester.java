@@ -52,6 +52,7 @@ public class QSLenTester {
     int ctr = 3;
     while(current != null) {
       assert(current.countElements() == ctr--);
+      current = current.next;
     }
     
     StringLL example4 = new StringLL();
