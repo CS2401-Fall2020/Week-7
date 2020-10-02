@@ -65,7 +65,7 @@ public class QSLenTester {
     assert(example3.next.toString().equals("B, C"));
     assert(example3.next.next.toString().equals("C"));
 
-    
+    System.out.println("All assert tests passed");
 
   }
 
